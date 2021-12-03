@@ -1,6 +1,8 @@
 package com.example.retrofitpractice
 
-object KmoocService {
-    private const val BASE_URL = "http://apis.data.go.kr/B552881/kmooc/"
-    val client = BaseService().getClient(BASE_URL)?.create(KmoocApi::class.java)
+import com.example.retrofitpractice.network.ApiClient
+
+class KmoocService {
+    private val BASE_URL = "http://apis.data.go.kr/B552881/kmooc/"
+    val client = ApiClient.getApiClient(BASE_URL)?.create(KmoocApi::class.java)
 }
