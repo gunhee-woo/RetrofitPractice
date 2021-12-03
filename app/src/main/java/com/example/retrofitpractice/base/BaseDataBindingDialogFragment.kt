@@ -12,8 +12,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
 import com.example.retrofitpractice.R
-
 import io.reactivex.disposables.CompositeDisposable
+
 
 /**
  * Created by Owner on 2017-06-22.

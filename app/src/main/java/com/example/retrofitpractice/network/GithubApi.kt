@@ -12,10 +12,13 @@ interface GithubApi {
     fun getRepos(@Path("owner") owner: String) : List<GithubRepo>
 
     @GET("users/{owner}/repos")
+    suspend fun getReposSuspend(@Path("owner") owner: String) : List<GithubRepo>
+
+    @GET("users/{owner}/repos")
     suspend fun getReposResponse(@Path("owner") owner: String) : Response<List<GithubRepo>>
 
     @GET("users/{owner}/repos")
-    suspend fun getReposCall(@Path("owner") owner: String) : Call<List<GithubRepo>>
+    fun getReposCall(@Path("owner") owner: String) : Call<List<GithubRepo>>
 
     @GET("users/{owner}/repos")
     fun getReposSingle(@Path("owner") owner: String) : Single<List<GithubRepo>>
